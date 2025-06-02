@@ -11,11 +11,11 @@ async function main() {
     const reportingService = new ReportingService(logEntries);
     const numberOfUniqueIps = reportingService.getNumberOfUniqueIps();
     const top3MostVisitedUrls = reportingService.getTop3MostVisitedUrls();
-    const top3MostVisitedIps = reportingService.getTop3MostVisitedIps();
+    const top3MostActiveIps = reportingService.getTop3MostActiveIps();
 
     console.log("Number of unique IPs:", numberOfUniqueIps);
     console.log("Top 3 most visited URLs:", top3MostVisitedUrls);
-    console.log("Top 3 most visited IPs:", top3MostVisitedIps);
+    console.log("Top 3 most active IPs:", top3MostActiveIps);
 }
 
 main().catch(error => {

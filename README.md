@@ -4,22 +4,28 @@ A Node.js application for reading and processing log files, written in TypeScrip
 
 ## Setup
 
-1. Install dependencies:
+1. Install node:
+```bash
+brew install nvm
+nvm install 22
+```
+
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Build the project:
+3. Build the project:
 ```bash
 npm run build
 ```
 
-3. Run the application:
+4. Run the application:
 ```bash
 npm start
 ```
 
-4. Run tests:
+5. Run tests:
 ```bash
 npm run test:unit
 npm run test:unit:cov

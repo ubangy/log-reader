@@ -7,7 +7,7 @@ export class ReportingService {
         return new Set(this.logEntries.map(entry => entry.ip)).size;
     }
 
-    getTop3MostVisitedIps(): string[] {
+    getTop3MostActiveIps(): string[] {
         const ipCounts = this.logEntries.reduce((acc, entry) => {
             acc[entry.ip] = (acc[entry.ip] || 0) + 1;
             return acc;
