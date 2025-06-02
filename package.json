@@ -1,0 +1,21 @@
+{
+  "name": "log-reader",
+  "version": "1.0.0",
+  "description": "A Node.js log reader application",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "start": "node dist/src/index.js",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Justin Urbanski",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.11.24",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.4",
+    "typescript": "^5.3.3"
+  }
+}

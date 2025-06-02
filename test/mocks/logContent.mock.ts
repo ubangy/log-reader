@@ -1,0 +1,2 @@
+export const mockLogContent = `192.168.1.1 user1 frank [10/Oct/2000:13:55:36 -0700] "GET /api/users HTTP/1.1" 200 2326 "http://example.com" "Mozilla/5.0"
+192.168.1.2 user2 john [10/Oct/2000:13:55:37 -0700] "POST /api/data HTTP/1.1" 404 123 "http://example.org" "Chrome/91.0"`; 
