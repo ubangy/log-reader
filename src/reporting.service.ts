@@ -13,7 +13,16 @@ export class ReportingService {
             return acc;
         }, {} as Record<string, number>);
 
-        return Object.entries(ipCounts).sort((a, b) => b[1] - a[1]).slice(0, 3).map(entry => entry[0]);
+        return Object.entries(ipCounts)
+            .sort((a, b) => {
+                // First sort by visit count (descending)
+                const countDiff = b[1] - a[1];
+                if (countDiff !== 0) return countDiff;
+                // If counts are equal, sort by IP address (ascending)
+                return a[0].localeCompare(b[0]);
+            })
+            .slice(0, 3)
+            .map(entry => entry[0]);
     }
 
     getTop3MostVisitedUrls(): string[] {
@@ -22,6 +31,15 @@ export class ReportingService {
             return acc;
         }, {} as Record<string, number>);
 
-        return Object.entries(urlCounts).sort((a, b) => b[1] - a[1]).slice(0, 3).map(entry => entry[0]);
+        return Object.entries(urlCounts)
+            .sort((a, b) => {
+                // First sort by visit count (descending)
+                const countDiff = b[1] - a[1];
+                if (countDiff !== 0) return countDiff;
+                // If counts are equal, sort by URL path (ascending)
+                return a[0].localeCompare(b[0]);
+            })
+            .slice(0, 3)
+            .map(entry => entry[0]);
     }
 }
